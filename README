@@ -1,0 +1,9 @@
+sm3crypt cracker used for CMIYC 2024 based on xcrypt PR.
+
+the cracker is single-thread, but can be made multithreaded using
+my jobflow program like so:
+
+    john -session=foobar -stdout -mask='Aksha#?d?d?d?d' | jobflow -threads 8 -bulk 4K -exec ./sm3 hashes.sm3
+
+the jobflow program passes stdin in chunks of "bulk" bytes to avoid
+syscall overhead.
