@@ -1,6 +1,6 @@
 #undef _POSIX_C_SOURCE
 #define _POSIX_C_SOURCE 200809L
-#include "../../include/sblist.h"
+#include "sblist.h"
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>
