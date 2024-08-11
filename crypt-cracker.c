@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include "../../cdev/cdev/lib/include/sblist.h"
+#include "sblist.h"
 
 struct hash {
 	char user[32];
