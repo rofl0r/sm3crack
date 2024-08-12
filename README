@@ -7,3 +7,11 @@ my jobflow program like so:
 
 the jobflow program passes stdin in chunks of "bulk" bytes to avoid
 syscall overhead.
+
+build:
+
+    echo "CFLAGS = -mavx -msse2 -O3 -g0 -flto -std=gnu99 -static" > config.mak
+    make
+
+if you build for non-x86_64 platform, remove the #include "mymemcpy.c" and
+#define memcpy mymemcpy from crypt-sm3.c.
